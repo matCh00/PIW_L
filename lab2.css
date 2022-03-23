@@ -1,5 +1,6 @@
 body {
     margin: 20px;
+    background-color: antiquewhite;
 }
 
 .form-control {
@@ -10,7 +11,12 @@ body {
     margin-bottom: 30px;
 }
 
+ul {
+    margin: 30px;
+}
+
 li {
+    margin-top: 15px;
     margin-bottom: 10px;
     border-radius: 10px;
     border: 3px;
@@ -30,5 +36,29 @@ li {
 #modal h1 {
     color: red;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 250px;
+    font-size: 70px;
+}
+
+li {
+    user-select: none;
+}
+
+h3 {
+    cursor: pointer;
+}
+
+h3:hover {
+    color: darkslateblue;
+}
+
+.radios {
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: -40px;
+    text-align: center;
+}
+
+.radios:hover {
+    color: teal;
 }

@@ -1,9 +1,27 @@
 "use strict"
 
-const list = document.getElementById("todoList");
+const list1 = document.getElementById("list1");
+const list2 = document.getElementById("list2");
+const list3 = document.getElementById("list3");
 const input = document.getElementById("taskInput");
 const button = document.getElementById("submitButton");
+const header1 = document.getElementById("header1");
+const header2 = document.getElementById("header2");
+const header3 = document.getElementById("header3");
+const radio1 = document.getElementById("radio1");
+const radio2 = document.getElementById("radio2");
+const radio3 = document.getElementById("radio3");
 
+// kosz
+let $trash = "";
+
+// widoczność list
+let isChill = true;
+let isImportant = true;
+let isDeadline = true;
+
+// mapa
+let map = new Map();
 
 // przycisk Submit
 const submitTask = () => {
@@ -16,9 +34,20 @@ const submitTask = () => {
         item.setAttribute("id", `${input.value}`);
         item.setAttribute("ondblclick", `listItemClick(\"${input.value}\")`);
         item.setAttribute("class", "list-group-item");
-        item.onselectstart = () => {return false;}
-        list.appendChild(item);
-      
+
+        if (radio1.checked) {
+            list1.appendChild(item);
+            map.set(input.value, "list1");
+        }
+        else if (radio2.checked) {
+            list2.appendChild(item);
+            map.set(input.value, "list2");
+        }
+        else if (radio3.checked) {
+            list3.appendChild(item);
+            map.set(input.value, "list3");
+        }
+        
         //const deleteBtn = document.createElement("button");
         //deleteBtn.innerHTML = "X";
         //deleteBtn.style.margin = "0px 10px 0px 10px";
@@ -28,11 +57,11 @@ const submitTask = () => {
 
         // tworzenie przycisku do elementu listy
         // jQuery
-        $('<button> X </button>').attr({
+        $(item).append($('<button> X </button>').attr({
             style: 'margin: 0px 10px 0px 10px',
             onclick: `listItemDelete(\"${input.value}\")`,
             class: 'btn btn-outline-danger btn-sm'
-        }).appendTo(item);
+        }));
     }
     else {
         console.log("input is empty");
@@ -79,15 +108,16 @@ const listItemClick = (name) => {
 // przycisk na elemencie listy
 const listItemDelete = (name) => {
 
-    //document.getElementById(`${name}`).remove();
-
     // jQuery
     $("#modal").toggle("slow");
 
     $("#modalOK").click(() => {
 
+        // zapamiętanie w koszu
+        $trash = name;
+
         // usunięcie gdy naciśnięty jest przycisk OK
-        $('#' + name).remove();
+        $('#' + name).remove(); 
     });
 
     // chowanie modala
@@ -95,3 +125,93 @@ const listItemDelete = (name) => {
         $("#modal").hide();
     });
 }
+
+
+// nasłuchiwanie cofnięcia usunięcia
+// jQuery
+$(document).keydown((e) => {
+
+    if (e.which === 90 && e.ctrlKey && e.shiftKey) {
+        return;
+    }
+    else if (e.which === 90 && e.ctrlKey) {  // ctrl + z
+        
+        if ($trash !== "") {
+
+            // tworzenie jeszcze raz elementu z kosza
+            var $item = $(`<li> ${$trash} </li>`).attr({
+                id: `${$trash}`,
+                ondblclick: `listItemClick(\"${$trash}\")`,
+                class: 'list-group-item'
+            });
+
+            var $deleteBtn = $('<button> X </button>').attr({
+                style: 'margin: 0px 10px 0px 10px',
+                onclick: `listItemDelete(\"${$trash}\")`,
+                class: 'btn btn-outline-danger btn-sm'
+            });
+
+            $($item).append($deleteBtn);
+            $("#" + map.get($trash)).append($item);
+            
+            $trash = "";
+        } 
+    }          
+}); 
+
+
+header1.addEventListener('click', (e) => {
+    
+    let elements = list1.getElementsByTagName('li');
+
+    if (isChill === true) {
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = "none";
+        }
+        isChill = false;
+    }
+    else {
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = "";
+        }
+        isChill = true;
+    }
+});
+
+
+header2.addEventListener('click', (e) => {
+    
+    let elements = list2.getElementsByTagName('li');
+
+    if (isImportant === true) {
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = "none";
+        }
+        isImportant = false;
+    }
+    else {
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = "";
+        }
+        isImportant = true;
+    }
+});
+
+
+header3.addEventListener('click', (e) => {
+    
+    let elements = list3.getElementsByTagName('li');
+
+    if (isDeadline === true) {
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = "none";
+        }
+        isDeadline = false;
+    }
+    else {
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = "";
+        }
+        isDeadline = true;
+    }
+});

@@ -15,10 +15,38 @@
             <div>
                 <input id="taskInput" class="form-control" placeholder="type task..." spellcheck="false"/>
                 <br>
-                <button id="submitButton" onclick="submitTask()" class="btn btn-success">Submit</button>
+
+                <div>
+                    <button id="submitButton" onclick="submitTask()" class="btn btn-success">Submit</button>
+
+                    <div class="radios">
+                        <h6>Chill</h6>
+                        <input name="choose" class="form-check-input" type="radio" checked id="radio1">
+                    </div>
+
+                    <div class="radios">
+                        <h6>Important</h6>
+                        <input name="choose" class="form-check-input" type="radio" id="radio2">
+                    </div>
+
+                    <div class="radios">
+                        <h6>Deadline</h6>
+                        <input name="choose" class="form-check-input" type="radio" id="radio3">
+                    </div>
+                    
+                </div>
+                
             </div>
 
-            <ul id="todoList" class="list-group"></ul>
+            <ul id="list1" class="list-group"> 
+                <h3 id="header1"> Chill </h3>  
+            </ul>
+            <ul id="list2" class="list-group"> 
+                <h3 id="header2"> Important </h3>  
+            </ul>
+            <ul id="list3" class="list-group"> 
+                <h3 id="header3"> Deadline </h3>  
+            </ul>
 
             <div id="modal">
                 <h1>
