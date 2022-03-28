@@ -1,0 +1,138 @@
+.navBar {
+  background: #3b3b3b;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navBar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.navBar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navBar__item {
+  height: 80px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 80px;
+}
+
+.navBar__links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  text-decoration: none;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.navBar__links:hover {
+  color: #2eac2e;
+}
+
+.searchStudents__container {
+  background: #f0f3f2;
+  height: auto;
+  padding-bottom: 40px;
+}
+
+.searchStudents__input {
+  margin-top: 50px;
+  margin-left: 40px;
+  font-weight: 600;
+  left: 20%;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #c5e7c5, #dfe6fc);
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.searchStudents__button {
+  margin-top: 50px;
+  margin-left: 40px;
+  font-weight: 600;
+  left: 20%;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #c5e7c5, #dfe6fc);
+  width: 100px;
+  height: auto;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.searchStudents__button:hover {
+  background: linear-gradient(to right, #a6c2a6, #b7bdcf);
+  cursor: pointer;
+}
+
+.showStudents__container {
+  margin: 30px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background: #ebe9e9;
+  height: 650px;
+}
+
+.showStudents__element {
+  font-size: 20px;
+  background: linear-gradient(to top left, #e2dee2 0%, #daebe7 100%);
+  background-size: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 2px;
+  min-width: 400px;
+  height: 500px;
+  display: inline-block;
+  margin: 30px;
+}
+
+.showStudents__elementTags h4 {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: #b4b2b2;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-linear-gradient(to right, #2eac2e, #3861d1);
+  background: linear-gradient(to right, #2eac2e, #3861d1);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: -webkit-linear-gradient(to right, #207520, #294799);
+  background: linear-gradient(to right, #207520, #294799);
+  border-radius: 12px;
+}

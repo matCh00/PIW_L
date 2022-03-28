@@ -1,0 +1,73 @@
+{
+  "students": [
+    {
+      "id": "student1",
+      "name": "Matt",
+      "email": "matt@gmail.com",
+      "description": "ambitious student",
+      "class": "PIW",
+      "tags": ["JS", "Python", "C++"]
+    },
+    {
+      "id": "student2",
+      "name": "Tom",
+      "email": "tom@gmail.com",
+      "description": "shy student",
+      "class": "PIW",
+      "tags": ["C++", "Python"]
+    },
+    {
+      "id": "student3",
+      "name": "John",
+      "email": "john@gmail.com",
+      "description": "student",
+      "class": "RiPO",
+      "tags": ["TS", "Python"]
+    },
+    {
+      "id": "student4",
+      "name": "Andrew",
+      "email": "andrew@gmail.com",
+      "description": "hard working student",
+      "class": "RiPO",
+      "tags": ["JS", "TS", "C#"]
+    },
+    {
+      "id": "student5",
+      "name": "Jess",
+      "email": "jess@gmail.com",
+      "description": "lazy student",
+      "class": "PEA",
+      "tags": ["Python"]
+    },
+    {
+      "id": "student6",
+      "name": "Alex",
+      "email": "alex@gmail.com",
+      "description": "nice student",
+      "class": "AK2",
+      "tags": ["Assembler", "C", "Ruby"]
+    }
+  ],
+
+  "groups": [
+    {
+      "id": "group1",
+      "name": "koksy",
+      "description": "uczymy się robić strony internetowe",
+      "members": ["student1", "student2"]
+    },
+    {
+      "id": "group2",
+      "name": "ziomki",
+      "description": "czekamy dalej na info co mamy robić",
+      "members": ["student3", "student4"]
+    },
+    {
+      "id": "group3",
+      "name": "piwo",
+      "description": "nie wiem co tu robię",
+      "members": ["student5", "student6"]
+    }
+  ]
+}
