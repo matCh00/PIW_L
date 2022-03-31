@@ -1,16 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react';
+import NavBar from "../Components/NavBar";
+import Groups from "../Components/Groups";
 
-export class SearchGroups extends Component {
 
-  constructor(props) {
-    super(props);
-  }
+const SearchGroups = () => {
+  return (
+    <div>
+      <NavBar></NavBar>
+      <Groups></Groups>
+    </div> 
+  );
+};
 
-  render() {
-    return (
-      <div>SearchGroups</div>
-    )
-  }
-}
-
-export default SearchGroups
+export default SearchGroups;

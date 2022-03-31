@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import NavBar from "../Components/NavBar";
+import GroupAnnouncement from "../Components/GroupAnnouncement";
+
 
 const AddGroup = () => {
   return (
-    <div>AddGroup</div>
-  )
-}
+    <div>
+      <NavBar></NavBar>
+      <GroupAnnouncement></GroupAnnouncement>
+    </div>
+  );
+};
 
-export default AddGroup
+export default AddGroup;

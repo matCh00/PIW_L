@@ -4,70 +4,127 @@
       "id": "student1",
       "name": "Matt",
       "email": "matt@gmail.com",
-      "description": "ambitious student",
-      "class": "PIW",
-      "tags": ["JS", "Python", "C++"]
+      "description": "ambitious student interested in sports",
+      "subject": [
+        "PIW"
+      ],
+      "tags": [
+        "JS",
+        "Python",
+        "C++"
+      ]
     },
     {
       "id": "student2",
       "name": "Tom",
       "email": "tom@gmail.com",
-      "description": "shy student",
-      "class": "PIW",
-      "tags": ["C++", "Python"]
+      "description": "I am shy student",
+      "subject": [
+        "PIW"
+      ],
+      "tags": [
+        "C++",
+        "Python"
+      ]
     },
     {
       "id": "student3",
       "name": "John",
       "email": "john@gmail.com",
-      "description": "student",
-      "class": "RiPO",
-      "tags": ["TS", "Python"]
+      "description": "shy, nothing more to say :)",
+      "subject": [
+        "RiPO"
+      ],
+      "tags": [
+        "TS",
+        "Python"
+      ]
     },
     {
       "id": "student4",
       "name": "Andrew",
       "email": "andrew@gmail.com",
-      "description": "hard working student",
-      "class": "RiPO",
-      "tags": ["JS", "TS", "C#"]
+      "description": "I am hard working student, looking for nice group",
+      "subject": [
+        "RiPO"
+      ],
+      "tags": [
+        "JS",
+        "TS",
+        "C#"
+      ]
     },
     {
       "id": "student5",
       "name": "Jess",
       "email": "jess@gmail.com",
-      "description": "lazy student",
-      "class": "PEA",
-      "tags": ["Python"]
+      "description": "I am a bit lazy but ambitious too...",
+      "subject": [
+        "PEA"
+      ],
+      "tags": [
+        "Python"
+      ]
     },
     {
       "id": "student6",
       "name": "Alex",
       "email": "alex@gmail.com",
-      "description": "nice student",
-      "class": "AK2",
-      "tags": ["Assembler", "C", "Ruby"]
+      "description": "nice student, don't know what to do in future",
+      "subject": [
+        "AK2",
+        "PEA"
+      ],
+      "tags": [
+        "Assembler",
+        "C",
+        "Ruby"
+      ]
     }
   ],
-
   "groups": [
     {
       "id": "group1",
-      "name": "koksy",
-      "description": "uczymy się robić strony internetowe",
-      "members": ["student1", "student2"]
+      "name": "WEB koksy",
+      "description": "designing web applications, looking for hard working people",
+      "subject": "PIW",
+      "members": [
+        "Matt",
+        "Tom"
+      ],
+      "emails": []
     },
     {
       "id": "group2",
-      "name": "ziomki",
-      "description": "czekamy dalej na info co mamy robić",
-      "members": ["student3", "student4"]
+      "name": "Łatwe zaliczenie",
+      "description": "we don't know what to do",
+      "subject": "RiPO",
+      "members": [
+        "John",
+        "Andrew"
+      ],
+      "emails": []
     },
     {
       "id": "group3",
-      "name": "piwo",
-      "description": "nie wiem co tu robię",
-      "members": ["student5", "student6"]
+      "name": "Idziemy na piwo",
+      "description": "group... [place to write sth about group we don't know]",
+      "subject": "PIW",
+      "members": [
+        "Jess",
+        "Alex"
+      ],
+      "emails": []
+    },
+    {
+      "id": "group4",
+      "name": "Pusta grupa",
+      "description": "if anyone left?",
+      "subject": "IO",
+      "members": [
+        "unnamed"
+      ],
+      "emails": []
     }
   ]
 }

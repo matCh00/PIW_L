@@ -1,29 +1,38 @@
-import React from 'react'
-import "./Components.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
+    <nav className="navBar">
+      <div className="navBar__container">
+        <ul className="navBar__menu">
+        <li className="navBar__item">
+            <Link to="/" className="navBar__links" id="home-page">
+              Search for people
+            </Link>
+          </li>
 
-      <nav className='navBar'>
-        <div className='navBar__container'>
-          <ul className='navBar__menu'>
+          <li className="navBar__item">
+            <Link to="/add-announcement" className="navBar__links" id="add-announcement-page">
+              Add announcement
+            </Link>
+          </li>
 
-            <li className="navBar__item"> 
-              <a href="/add-announcement" className="navBar__links" id="list-page">Add announcement</a>
-            </li>
+          <li className="navBar__item">
+            <Link to="/search-groups" className="navBar__links" id="search-groups-page">
+              Search for groups
+            </Link>
+          </li>
 
-            <li className="navBar__item"> 
-              <a href="/search-groups" className="navBar__links" id="list-page">Search for groups</a>
-            </li>
+          <li className="navBar__item">
+            <Link to="/add-group" className="navBar__links" id="add-group-page">
+              Add new group
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
-            <li className="navBar__item"> 
-              <a href="/add-group" className="navBar__links" id="list-page">Create group</a>
-            </li>
-
-          </ul>
-        </div>
-      </nav>
-  )
-}
-
-export default NavBar
+export default NavBar;
