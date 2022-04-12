@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../../assets/AddGroup.css";
 
 export class GroupAnnouncement extends Component {
 

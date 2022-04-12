@@ -1,0 +1,21 @@
+/*******************************/
+/*     STUDENT ANNOUNCEMENT    */
+/*******************************/
+.studentAnnouncement__container {
+  height: auto;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
+.studentAnnouncement__input {
+  background: linear-gradient(to right, #c5e7c5, #dfe6fc);
+}
+
+.studentAnnouncement__button {
+  background: linear-gradient(to right, #c5e7c5, #dfe6fc);
+}
+
+.studentAnnouncement__button:hover {
+  background: linear-gradient(to right, #abe4ab, #b6c6fc);
+  cursor: pointer;
+}

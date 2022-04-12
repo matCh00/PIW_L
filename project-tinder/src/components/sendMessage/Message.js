@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import message_sent from "../res/message_sent.png";
+import message_sent from "../../assets/images/message_sent.png";
+import "../../assets/SendMessage.css";
 
 const Message = () => {
 

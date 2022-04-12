@@ -1,0 +1,45 @@
+[
+  {
+    "id": "group1",
+    "name": "WEB koksy",
+    "description": "designing web applications, looking for hard working people",
+    "subject": "PIW",
+    "members": [
+      "Matt",
+      "Amy"
+    ],
+    "emails": []
+  },
+  {
+    "id": "group2",
+    "name": "Łatwe zaliczenie",
+    "description": "we don't know what to do",
+    "subject": "RiPO",
+    "members": [
+      "John",
+      "Hope"
+    ],
+    "emails": []
+  },
+  {
+    "id": "group3",
+    "name": "Idziemy na piwo",
+    "description": "group... [place to write sth about group we don't know]",
+    "subject": "PIW",
+    "members": [
+      "Jess",
+      "Alex"
+    ],
+    "emails": []
+  },
+  {
+    "id": "group4",
+    "name": "Pusta grupa",
+    "description": "if anyone left?",
+    "subject": "IO",
+    "members": [
+      "unnamed"
+    ],
+    "emails": []
+  }
+]

@@ -1,8 +1,10 @@
 import React, { useState, createContext } from "react";
 import GroupsSearch from "./GroupsSearch";
 import GroupsShow from "./GroupsShow";
+import "../../assets/SearchGroups.css";
 
-export const GroupsContext = createContext(null);
+// CONTEXT
+export const GroupsContext = createContext(["", ()=>{}]);
 
 const Groups = () => {
   
@@ -28,8 +30,8 @@ const Groups = () => {
         setClick,
       }}
     >
-      <GroupsSearch></GroupsSearch>
-      <GroupsShow></GroupsShow>
+      <GroupsSearch />
+      <GroupsShow />
     </GroupsContext.Provider>
   );
 };

@@ -1,0 +1,82 @@
+/*******************************/
+/*       PASEK NAWIGACJI       */
+/*******************************/
+.navBar {
+  background: #3b3b3b;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navBar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.navBar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navBar__item {
+  height: 80px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: fit-content;
+}
+
+.navBar__links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  text-decoration: none;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.navBar__links:hover {
+  color: #2eac2e;
+}
+
+/*******************************/
+/*           STOPKA            */
+/*******************************/
+.footer {
+  background: #3b3b3b;
+  height: 40px;
+  font-size: 1rem;
+  position: sticky;
+  bottom: 0;
+  z-index: 999;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+  bottom: 0;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}

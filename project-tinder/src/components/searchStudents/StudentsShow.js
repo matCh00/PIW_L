@@ -1,5 +1,7 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useLayoutEffect, useState, useContext } from "react";
 import { StudentsContext } from "./Students";
+import DatabaseService from "../../services/DatabaseService";
+import ImageService from "../../services/ImageService";
 
 const StudentsShow = () => {
 
@@ -13,15 +15,22 @@ const StudentsShow = () => {
   const {description, tag, subject, click} = useContext(StudentsContext);
 
 
-  // pobieranie danych z serwera json ograniczone do jednej funkcji
+  // pobieranie danych z pliku json
   const loadData = () => {
-    const getData = async () => {
-      const res = await fetch("http://localhost:5000/students");
-      const data = await res.json();
-      setStudentList(data);
-      setFilteredStudentList(data);
-    };
-    getData();
+
+    DatabaseService.getStudentList().then(
+      (res) => {
+        const data = res.data;
+        setStudentList(data);
+        setFilteredStudentList(data);
+      }
+    )
+  }
+
+
+  // wczytanie losowego obrazka
+  const setImage = (id) => {
+    return ImageService.getImageSource();
   }
 
 
@@ -95,21 +104,6 @@ const StudentsShow = () => {
   };
 
 
-  // usuwanie studenta
-  // const deleteStudent = async (id) => {
-
-  //   console.log("delete student id:" + id);
-
-  //   const res = await fetch(`http://localhost:5000/students/${id}`, {
-  //     method: 'DELETE',
-  //   });
-
-  //   res.status === 200
-  //     ? setStudentList(studentList.filter((e) => e.id !== id))
-  //     : alert('Error Deleting This Student');
-  // }
-
-
   return (
     <div className="showStudents__container">
       {filteredStudentList.map((s) => {
@@ -117,8 +111,11 @@ const StudentsShow = () => {
 
           <div className="showStudents__element" key={s.id} id={s.id}>
 
-            <h1> {s.name} </h1>
-
+            <div className="showStudents__elementHeader">
+              <h1> {s.name} </h1>
+              <img className="showStudents__image" id={s.id + "_image"} src={setImage(s.id + "_image")} />
+            </div>
+            
             {s.subject.map((c) => {
               return (
                 <div className="showStudents__elementSubject" key={c}>

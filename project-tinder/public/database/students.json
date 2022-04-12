@@ -1,0 +1,83 @@
+[
+  {
+    "id": "student1",
+    "name": "Matt",
+    "email": "matt@gmail.com",
+    "description": "ambitious student interested in sports",
+    "subject": [
+      "PIW"
+    ],
+    "tags": [
+      "JS",
+      "Python",
+      "C++"
+    ]
+  },
+  {
+    "id": "student2",
+    "name": "Amy",
+    "email": "tom@gmail.com",
+    "description": "I am shy student",
+    "subject": [
+      "PIW"
+    ],
+    "tags": [
+      "C++",
+      "Python"
+    ]
+  },
+  {
+    "id": "student3",
+    "name": "John",
+    "email": "john@gmail.com",
+    "description": "shy, nothing more to say :)",
+    "subject": [
+      "RiPO"
+    ],
+    "tags": [
+      "TS",
+      "Python"
+    ]
+  },
+  {
+    "id": "student4",
+    "name": "Hope",
+    "email": "andrew@gmail.com",
+    "description": "I am hard working student, looking for nice group",
+    "subject": [
+      "RiPO"
+    ],
+    "tags": [
+      "JS",
+      "TS",
+      "C#"
+    ]
+  },
+  {
+    "id": "student5",
+    "name": "Jess",
+    "email": "jess@gmail.com",
+    "description": "I am a bit lazy but ambitious too...",
+    "subject": [
+      "PEA"
+    ],
+    "tags": [
+      "Python"
+    ]
+  },
+  {
+    "id": "student6",
+    "name": "Alex",
+    "email": "alex@gmail.com",
+    "description": "nice student, don't know what to do in future",
+    "subject": [
+      "AK2",
+      "PEA"
+    ],
+    "tags": [
+      "Assembler",
+      "C",
+      "Ruby"
+    ]
+  }
+]

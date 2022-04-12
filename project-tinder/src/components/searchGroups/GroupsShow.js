@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { GroupsContext } from "./Groups";
-import chatting1 from "../res/chatting1.png";
-import chatting2 from "../res/chatting2.png";
+import chatting1 from "../../assets/images/chatting1.png";
+import chatting2 from "../../assets/images/chatting2.png";
+import DatabaseService from "../../services/DatabaseService";
 
 const GroupsShow = () => {
 
@@ -16,15 +17,16 @@ const GroupsShow = () => {
   const {name, members, description, subject, click} = useContext(GroupsContext);
 
 
-  // pobieranie danych z serwera json ograniczone do jednej funkcji
+  // pobieranie danych z pliku json
   const loadData = () => {
-    const getData = async () => {
-      const res = await fetch("http://localhost:5000/groups");
-      const data = await res.json();
-      setGroupList(data);
-      setFilteredGroupList(data);
-    };
-    getData();
+
+    DatabaseService.getGroupList().then(
+      (res) => {
+        const data = res.data;
+        setGroupList(data);
+        setFilteredGroupList(data);
+      }
+    )
   }
 
 

@@ -1,0 +1,21 @@
+/*******************************/
+/*      GROUP ANNOUNCEMENT     */
+/*******************************/
+.groupAnnouncement__container {
+  height: auto;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
+.groupAnnouncement__input {
+  background: linear-gradient(to right, #e1e9c0, #fcdafd);
+}
+
+.groupAnnouncement__button {
+  background: linear-gradient(to right, #e1e9c0, #fcdafd);
+}
+
+.groupAnnouncement__button:hover {
+  background: linear-gradient(to right, #d7e69c, #fbb8fd);
+  cursor: pointer;
+}

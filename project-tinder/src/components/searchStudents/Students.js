@@ -1,8 +1,10 @@
 import React, { useState, createContext } from "react";
 import StudentsSearch from "./StudentsSearch";
 import StudentsShow from "./StudentsShow";
+import "../../assets/SearchStudents.css";
 
-export const StudentsContext = createContext(null);
+// CONTEXT
+export const StudentsContext = createContext(["", ()=>{}]);
 
 const Students = () => {
   
@@ -25,8 +27,8 @@ const Students = () => {
         setClick,
       }}
     >
-      <StudentsSearch></StudentsSearch>
-      <StudentsShow></StudentsShow>
+      <StudentsSearch />
+      <StudentsShow />
     </StudentsContext.Provider>
   );
 };

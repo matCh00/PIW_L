@@ -1,13 +1,18 @@
 import React from "react";
-import NavBar from "../Components/NavBar";
-import StudentAnnouncement from "../Components/StudentAnnouncement";
+import NavBar from "../components/layouts/NavBar";
+import Footer from "../components/layouts/Footer";
+import StudentAnnouncement from "../components/addAnnouncement/StudentAnnouncement";
+import "../assets/Pages.css";
 
 
 const AddAnnouncement = () => {
   return (
-    <div>
-      <NavBar></NavBar>
-      <StudentAnnouncement></StudentAnnouncement>
+    <div className="pages__container">
+      <NavBar />
+      <div className="view__container">
+        <StudentAnnouncement />
+      </div>
+      <Footer />
     </div>
   );
 };
