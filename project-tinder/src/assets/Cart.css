@@ -1,0 +1,81 @@
+/*******************************/
+/*             CART            */
+/*******************************/
+.cart__container {
+  height: auto;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  display: flex;
+  width: 100%;
+}
+
+.cart__subContainer {
+  padding-bottom: 40px;
+  width: 50%;
+  float: left;
+  padding-left: calc(100vw / 7);
+}
+
+.cart__subContainer2 {
+  padding-bottom: 40px;
+  width: 50%;
+  float: right;
+  padding-right: calc(100vw / 7);
+}
+
+.cart__element {
+  font-size: 20px;
+  background: linear-gradient(to right, #ffd1d1, #e1ffd6);
+  background-size: 100%;
+  padding-bottom: 10px;
+  padding-top: 2px;
+  border-radius: 15px;
+  border-width: 2px;
+  min-width: 400px;
+  width: 400px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.cart__elementHeader {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.cart__image {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  box-shadow: 0 0 0.3em rgb(109, 200, 118);
+  margin-bottom: 20px;
+}
+
+.cart__element h2 {
+  text-decoration: none;
+}
+
+.cart__button {
+  background: linear-gradient(to right, #d68787, #c879c1);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.cart__button:hover {
+  background: linear-gradient(to right, #ce4646, #cb3bbf);
+  cursor: pointer;
+}
+
+#chattingIconCart {
+  margin-top: 15px;
+  width: 40px;
+  height: auto;
+  padding-right: 80px;
+}

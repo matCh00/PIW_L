@@ -1,19 +1,31 @@
 import axios from "axios";
+import DatabaseService from "./DatabaseService";
 
-const LINK = "https://picsum.photos/";
-
-
-const getRandomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max); 
-  return Math.floor(Math.random() * (max - min)) + min;
-}
 
 const getImageSource = () => {
-  //return LINK + "200";
-  return LINK + "id/" + getRandomInt(1, 1084).toString() + "/200";
-};
 
+  // pobranie listy studentów
+  DatabaseService.getStudentList().then((res) => {
+    const data = res.data;
+    data.forEach((e) => {
+
+      // zapytanie
+      axios({
+        url: "https://picsum.photos/200/200",
+        method: "GET",
+        responseType: "blob",
+      })
+      .then((response) => {
+        
+        // tworzenie objektu
+        let blob = URL.createObjectURL(response.data);
+
+        // zapisanie objektu w Local Storage
+        localStorage.setItem(e.id + "_image", JSON.stringify(blob));
+      });
+    });
+  });
+};
 
 const ImageService = {
   getImageSource,

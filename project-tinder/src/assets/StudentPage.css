@@ -1,0 +1,61 @@
+/*******************************/
+/*         STUDENT PAGE        */
+/*******************************/
+.studentForm__element {
+  font-size: 20px;
+  background: linear-gradient(to right, #ffd1d1, #e1ffd6);
+  background-size: 100%;
+  padding: 60px;
+  border-radius: 15px;
+  border-width: 2px;
+  min-width: 700px;
+  width: 700px;
+  height: auto;
+  display: inline-block;
+  margin: 60px;
+}
+
+.studentForm__elementSubject {
+  display: inline-block;
+}
+
+.studentForm__elementTags {
+  display: inline-block;
+}
+
+.studentForm__element h1 {
+  margin: 10px;
+  text-align: center;
+}
+
+.studentForm__elementSubject h2 {
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.studentForm__element h3 {
+  margin: 10px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.studentForm__elementTags h4 {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 50px;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 2px;
+  padding: 0px 10px 0px 10px;
+  height: 30px;
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(to right, #ff9c9c, #c0ffa9);
+}
+
+.studentForm__elementTags h4:hover {
+  background: linear-gradient(to right, #ff7171, #9eff7a);
+}

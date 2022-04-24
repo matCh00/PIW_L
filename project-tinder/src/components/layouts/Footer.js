@@ -1,11 +1,18 @@
-import React from 'react';
+import React from "react";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 import "../../assets/Layouts.css";
 
+
 const Footer = () => {
+
+  // użytkownik
+  const { user } = useContext(UserContext);
+
   return (
-    <footer className='footer'>
+    <footer className="footer">
       <div className="footer__container">
-        Simply footer for simply project
+        Hello {user} !
       </div>
     </footer>
   );
