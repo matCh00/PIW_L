@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  app:
+    image: react-image
+    ports: 
+      - 3000:3000
+    volumes:
+      - ./src/:/app/src/
+
+
+# docker run -p 3000:3000 -v $(pwd)/src:/app/src myimage
+
+# dockerhub -> obrazy do stawiania aplikacji

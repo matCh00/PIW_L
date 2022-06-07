@@ -40,7 +40,7 @@ const Message = () => {
         Send
       </button>
 
-      <div class="animation">
+      <div className="animation">
         <img
           src={message_sent}
           width="300"

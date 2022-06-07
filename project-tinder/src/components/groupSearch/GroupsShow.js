@@ -30,8 +30,13 @@ const GroupsShow = () => {
 
   // pobieranie danych z pliku json
   const loadData = () => {
+    // DatabaseService.getGroupList().then((res) => {
+    //   const data = res.data;
+    //   setGroupList(data);
+    //   setFilteredGroupList(data);
+    // });
     DatabaseService.getGroupList().then((res) => {
-      const data = res.data;
+      const data = res;
       setGroupList(data);
       setFilteredGroupList(data);
     });
@@ -112,7 +117,7 @@ const GroupsShow = () => {
     <div className="showGroups__container">
       {filteredGrouptList.map((g) => {
         return (
-          <div className="showGroups__element" key={g.id} id={g.id}>
+          <div className="showGroups__element" key={g.id + '_child'} id={g.id}>
             <div className="showGroups__elementHeader">
               <h1> {g.name} </h1>
               <Link
@@ -135,7 +140,7 @@ const GroupsShow = () => {
 
             {g.members.map((m) => {
               return (
-                <div className="showGroups__elementMembers" key={m}>
+                <div className="showGroups__elementMembers" key={g + "_" + m + '_members'}>
                   <h2> {m} </h2>
                 </div>
               );

@@ -7,15 +7,24 @@
     padding-top: 20px;
   }
   
-  .auth__input {
-    background: linear-gradient(to right, #9fdad2, #e4d5d5);
-  }
-  
-  .auth__button {
-    background: linear-gradient(to right, #9fdad2, #e4d5d5);
-  }
-  
-  .auth__button:hover {
-    background: linear-gradient(to right, #5dd5c5, #c0adad);
-    cursor: pointer;
-  }
+.auth__input {
+  background: linear-gradient(to right, #9fdad2, #e4d5d5);
+}
+
+.auth__button {
+  background: linear-gradient(to right, #9fdad2, #e4d5d5);
+}
+
+.auth__button2 {
+  background: linear-gradient(to right, #edaccc, #c4c6e2);
+}
+
+.auth__button:hover {
+  background: linear-gradient(to right, #5dd5c5, #c0adad);
+  cursor: pointer;
+}
+
+.auth__button2:hover {
+  background: linear-gradient(to right, #ebd1de, #d7d7e1);
+  cursor: pointer;
+}

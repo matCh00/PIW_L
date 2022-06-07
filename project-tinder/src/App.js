@@ -18,9 +18,9 @@ import { UserProvider } from "./contexts/UserContext";
 const App = () => {
 
   // sprawdzanie połączenia z bazą danych
-  useEffect(() => {
-    DatabaseService.checkConnection();
-  }, []);
+  // useEffect(() => {
+  //   DatabaseService.checkConnection();
+  // }, []);
 
   return (
     <UserProvider>

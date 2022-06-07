@@ -31,10 +31,15 @@ const StudentsShow = () => {
   };
 
 
-  // pobieranie danych z pliku json
+  // pobieranie danych
   const loadData = () => {
+    // DatabaseService.getStudentList().then((res) => {
+    //   const data = res.data;
+    //   setStudentList(data);
+    //   setFilteredStudentList(data);
+    // });
     DatabaseService.getStudentList().then((res) => {
-      const data = res.data;
+      const data = res;
       setStudentList(data);
       setFilteredStudentList(data);
     });
@@ -120,7 +125,7 @@ const StudentsShow = () => {
     <div className="showStudents__container">
       {filteredStudentList.map((s) => {
         return (
-          <div className="showStudents__element" key={s.id} id={s.id}>
+          <div className="showStudents__element" key={s.id + '_child'} id={s.id}>
             <div className="showStudents__elementHeader">
               <h1> {s.name} </h1>
 
@@ -142,7 +147,7 @@ const StudentsShow = () => {
 
             {s.subject.map((c) => {
               return (
-                <div className="showStudents__elementSubject" key={c}>
+                <div className="showStudents__elementSubject" key={s + c + '_subject'}>
                   <h2> {c} </h2>
                 </div>
               );
@@ -152,7 +157,7 @@ const StudentsShow = () => {
 
             {s.tags.map((t) => {
               return (
-                <div className="showStudents__elementTags" key={t}>
+                <div className="showStudents__elementTags" key={s + t + '_tags'}>
                   <h4> {t} </h4>
                 </div>
               );

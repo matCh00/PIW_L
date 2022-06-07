@@ -1,12 +1,17 @@
 import React from "react";
-import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { UserContext } from "../../contexts/UserContext";
 import { CartContext } from "../../contexts/CartContext";
 import "../../assets/Layouts.css";
 
+import { auth } from "../../firebase/init";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { logout } from "../../firebase/users";
 
 const NavBar = () => {
+
+  const [u, loading, error] = useAuthState(auth);
 
   // użytkownik
   const { user, setUser, userLS, setUserLS } = useContext(UserContext);
@@ -25,12 +30,24 @@ const NavBar = () => {
   };
 
   
-  const logout = () => {
-    setUser(null);
+  const logOutUser = () => {
+    // bug: localStorage nie czyści się
     setUserLS(null);
-    clearCart();
-    navigate("/login");
+    
+    logout().then(() => {
+      setUser(null);
+      setUserLS(null);
+      clearCart();
+      navigate("/login");
+    });
   };
+
+  useEffect(() => {
+    if (u) {
+      setUser(u.displayName);
+      setUserLS(u.displayName);
+    } 
+  }, [u]);
 
   return (
     <nav className="navBar">
@@ -78,26 +95,26 @@ const NavBar = () => {
             </li>
           )}
 
-          {user && (
+          {/*user && (
             <li className="navBar__item">
               <Link
                 to="/login"
                 className="navBar__links"
                 id="add-group-page"
-                onClick={logout}
+                onClick={logOutUser}
               >
                 Logout
               </Link>
             </li>
-          )}
+          )*/}
 
-          {!user && (
+          {/*!user && (
             <li className="navBar__item">
               <Link to="/login" className="navBar__links" id="add-group-page">
                 Login
               </Link>
             </li>
-          )}
+          )*/}
 
           {!user && (
             <li className="navBar__item">
@@ -123,6 +140,28 @@ const NavBar = () => {
               </Link>
             </li>
           )}
+
+          {u || user
+          ? <li className="navBar__item"> 
+              <Link 
+                to="/login" 
+                className="navBar__links" 
+                id="add-group-page"
+                onClick={logOutUser}
+              >Log {u ? u.displayName : user} out 
+              </Link> 
+            </li>
+
+          : <li className="navBar__item"> 
+              <NavLink 
+                to={"/login"} 
+                className="navBar__links" 
+                id="add-group-page"
+              >
+                Login
+              </NavLink>
+            </li>
+          } 
         </ul>
       </div>
     </nav>

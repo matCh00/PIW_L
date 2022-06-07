@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "../../assets/Authorization.css";
 import DatabaseService from "../../services/DatabaseService";
 
+import { auth } from "../../firebase/init";
+import { registerWithEmailAndPassword } from "../../firebase/users";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const RegisterForm = () => {
   
@@ -71,6 +74,14 @@ const RegisterForm = () => {
       >
         Submit
       </button>
+
+      <button 
+        onClick={() => registerWithEmailAndPassword(username, email, password)}
+        className="button buttonTwo auth__button2"
+      >
+        Register with Email and Password
+      </button>
+
     </div>
   );
 };

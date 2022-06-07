@@ -6,7 +6,9 @@ const getImageSource = () => {
 
   // pobranie listy studentów
   DatabaseService.getStudentList().then((res) => {
-    const data = res.data;
+    // const data = res.data;
+    const data = res;
+
     data.forEach((e) => {
 
       // zapytanie
